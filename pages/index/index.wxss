@@ -1,0 +1,59 @@
+.clinics {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #fafafa;
+	font-size: .8rem;
+}
+.clinics__header {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1rpx solid #e5e5e5;
+	text-align: center;
+	font-size: .8rem;
+}
+.clinics__list {
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #ffffff;
+}
+.clinics__items {
+	margin-left: 15px;
+	padding: 10px 0;
+	height: 50px;
+	background-color: #ffffff;
+}
+.clinics__items:before {
+	content: '';
+	position: absolute;
+	width: 200%;
+	height: 1px;
+	bottom: 0;
+	border-bottom: 1px solid #d6e4ed;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scale(.5,.5);
+	transform: scale(.5,.5);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+.clinics--left {
+	position: relative;
+	float: left;
+}
+.clinics--right {
+	height: 50px;
+	padding-right: 10px;
+	line-height: 1rem;
+}
+.clinics__img {
+	width: 50px;
+	height: 50px;
+}
+.dis-block {
+	display: block;
+}
+.clinics--c777 {
+	color: #777777;
+	font-size: .6rem;
+}

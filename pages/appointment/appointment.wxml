@@ -1,0 +1,74 @@
+<view class="container pd-b20">
+	<view class="info__tab">
+		<view class="tab--left">
+			<view class="tab__items">
+				<view class="tab__item br-tl1 active">预约</view>
+				<view class="tab__item br-rb1">预约记录</view>
+			</view>
+		</view>
+		<view class="tab--right">
+			<view class="tab__content tab__content--left">
+				<form class="form">
+					<view class="form__info">
+						<view class="form__info--row">
+							<label for="name">
+								<text class="form__icon form__icon__name"></text>
+							</label>
+							<input id="name" placeholder="姓名" />
+						</view>
+						<view class="form__info--row">
+							<label for="sex">
+								<text class="form__icon form__icon__sex"></text>
+							</label>
+							<input id="sex" placeholder="性别" />
+						</view>
+						<picker mode="date" value="{{birth}}" start="1992-09-02" end="2017-09-02" bindchange="bindDateChange">
+							<view class="form__info--row">
+								<label for="birth">
+									<text class="form__icon form__icon__birth"></text>
+								</label>
+								<input id="birth" class="picker" placeholder="出生日期" value="{{birth}}" />
+							</view>
+						</picker>
+						<view class="form__info--row">
+							<label for="phone">
+								<text class="form__icon form__icon__phone"></text>
+							</label>
+							<input id="phone" placeholder="手机号码" />
+						</view>
+						<view class="form__info--row">
+							<label for="department">
+								<text class="form__icon form__icon__department"></text>
+							</label>
+							<input id="department" disabled="true" bindtap="actionSheetTap" placeholder="预约科室" value="{{ department }}" />
+						</view>
+						<view class="form__info--row">
+							<label for="time">
+								<text class="form__icon form__icon__time"></text>
+							</label>
+							<input id="time" placeholder="预约时间" />
+						</view>
+						<view class="form__info--row br-b0">
+							<label for="desc">
+								<text class="form__icon form__icon__desc"></text>
+							</label>
+							<input id="desc" placeholder="描述" />
+						</view>
+					</view>
+					<view></view>
+					<view class="form__submit">
+						<button type="primary">提交</button>
+					</view>
+				</form>
+			</view>
+			<view class="tab__content tab__content--left"></view>
+		</view>
+	</view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+	<block wx:for="{{actionSheetItems}}">
+		<action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+	</block>
+	<action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

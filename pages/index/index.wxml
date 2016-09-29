@@ -1,0 +1,15 @@
+<view class="clinics">
+    <view class="clinics__header">请选择诊所</view>
+    <view class="clinics__list">
+        <view class="clinics__items" bindtap="bindViewTap" wx:for="{{ clinics }}" wx:for-item="clinic">
+            <view class="clinics--left">
+                <image class="clinics__img" src="{{ clinic.logo }}"></image>
+            </view>
+            <view class="clinics--right">
+                <text class="dis-block">{{ clinic.name }}</text>
+                <text class="dis-block clinics--c777">{{ clinic.phone }}</text>
+                <text class="dis-block clinics--c777">{{ clinic.address }}</text>
+            </view>
+        </view>
+    </view>
+</view>

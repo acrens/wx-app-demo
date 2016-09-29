@@ -1,0 +1,14 @@
+<view class="container doctors pd-b20">
+    <view class="doctors__header">医生团队</view>
+    <view class="doctors__list">
+        <view bindtap="navUrl" wx:for="{{ doctors }}" wx:for-index="index" wx:for-item="doctor" class="doctors__items {{ (index == (doctors.length-1))?'br-b0':'' }}">
+            <view class="doctors--left">
+                <image class="doctors__img" src="{{ doctor.photo }}"></image>
+            </view>
+            <view class="doctors--right">
+                <text class="ui-nowrap">{{ doctor.name }}</text>
+                <text class="ui-nowrap doctors--c777">{{ doctor.department }}</text>
+            </view>
+        </view>
+    </view>
+</view>

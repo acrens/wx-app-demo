@@ -1,0 +1,23 @@
+<view class="container personal pd-b20">
+    <view class="personal__header"></view>
+    <view class="personal__list mr-b10">
+        <view class="personal__items">
+            <view class="personal--left">
+                <image class="personal__img" src="{{ userinfo.photo }}"></image>
+            </view>
+            <view class="personal--right">
+                <text class="ui-nowrap fs-14">{{ userinfo.name }} {{ userinfo.sex }} {{ userinfo.age }}</text>
+                <text class="ui-nowrap personal--c777">手机号码：{{ userinfo.telphone }}</text>
+            </view>
+            <button class="personal__btn">修改头像</button>
+        </view>
+    </view>
+    <view class="personal__list">
+        <view class="personal__item">
+            <text>查看病历</text>
+        </view>
+        <view class="personal__item br-b0">
+            <text>隐私设置</text>
+        </view>
+    </view>
+</view>

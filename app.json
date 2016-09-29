@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/appointment/appointment",
+        "pages/doctors/doctors",
+        "pages/personal/personal"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTitleText": "诊所列表",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "color": "#737373",
+        "selectedColor": "#25cb83",
+        "borderStyle": "black",
+        "backgroundColor": "#fafafa",
+        "list": [{
+            "pagePath": "pages/appointment/appointment",
+            "iconPath": "assets/img/clock@2x.png",
+            "selectedIconPath": "assets/img/clock-s@2x.png",
+            "text": "预约就诊"
+        }, {
+            "pagePath": "pages/doctors/doctors",
+            "iconPath": "assets/img/doctor@2x.png",
+            "selectedIconPath": "assets/img/doctor-s@2x.png",
+            "text": "医生团队"
+        }, {
+            "pagePath": "pages/personal/personal",
+            "iconPath": "assets/img/user@2x.png",
+            "selectedIconPath": "assets/img/user-s@2x.png",
+            "text": "我的"
+        }]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+}
