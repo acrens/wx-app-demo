@@ -55,7 +55,6 @@ Page({
      * 跳转到医生个人信息页面
      */
     navUrl: function(e) {
-    	console.log(e);
     	wx.navigateTo({
             url: '../appointment/appointment'
         });

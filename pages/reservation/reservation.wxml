@@ -1,0 +1,39 @@
+<view class="container pd-b20 reservation">
+	<view class="info__tab">
+		<view class="tab--left">
+			<view class="tab__items">
+				<view class="tab__item br-tl1">预约</view>
+				<view class="tab__item br-rb1 active">预约记录</view>
+			</view>
+		</view>
+		<view class="reservation__list">
+			<view class="reservation__item" wx:for="{{ records }}" wx:for-index="index" wx:for-item="record">
+				<view class="reservation__box">
+					<view class="reservation__content">
+						<view class="reservation__detail h4">
+							<label>预约号：</label>{{ record.reservationId }}
+						</view>
+						<view class="reservation__detail">
+							<label>预约人：</label>{{ record.reservationName }}（{{ record.reservationSex }} {{ record.reservationAge }}）
+						</view>
+						<view class="reservation__detail">
+							<label>预约诊所：</label>{{ record.reservationClinic }}
+						</view>
+						<view class="reservation__detail">
+							<label>预约时间：</label>{{ record.reservationTime }}
+						</view>
+						<view class="reservation__detail">
+							<label>预约科室：</label>{{ record.reservationDepartment }}
+						</view>
+						<view class="reservation__detail">
+							<label>病情描述：</label>{{ record.reservationDesc }}
+						</view>
+						<view class="reservation__detail">
+							<label>取消原因：</label>{{ record.reservationCancel }}
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -2,7 +2,8 @@
     "pages": [
         "pages/appointment/appointment",
         "pages/doctors/doctors",
-        "pages/personal/personal"
+        "pages/personal/personal",
+        "pages/reservation/reservation"
     ],
     "window": {
         "backgroundTextStyle": "light",

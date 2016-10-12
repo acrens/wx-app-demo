@@ -20,7 +20,7 @@
 							<label for="sex">
 								<text class="form__icon form__icon__sex"></text>
 							</label>
-							<input id="sex" placeholder="性别" />
+							<input data-name="sex" id="sex" disabled="true" bindtap="actionSheetTap" placeholder="性别" value="{{ sex }}" />
 						</view>
 						<picker mode="date" value="{{birth}}" start="1992-09-02" end="2017-09-02" bindchange="bindDateChange">
 							<view class="form__info--row">
@@ -40,7 +40,7 @@
 							<label for="department">
 								<text class="form__icon form__icon__department"></text>
 							</label>
-							<input id="department" disabled="true" bindtap="actionSheetTap" placeholder="预约科室" value="{{ department }}" />
+							<input data-name="department" id="department" disabled="true" bindtap="actionSheetTap" placeholder="预约科室" value="{{ department }}" />
 						</view>
 						<view class="form__info--row">
 							<label for="time">
@@ -57,7 +57,7 @@
 					</view>
 					<view></view>
 					<view class="form__submit">
-						<button type="primary">提交</button>
+						<button type="primary" bindtap="subForm">提交</button>
 					</view>
 				</form>
 			</view>
@@ -66,9 +66,16 @@
 	</view>
 </view>
 
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+<action-sheet data-name="sex" hidden="{{sexSheetHidden}}" bindchange="actionSheetChange">
+	<block wx:for="{{sexSheetItems}}">
+		<action-sheet-item class="item" bindtap="bindItemTap" data-type="sex" data-name="{{item}}">{{item}}</action-sheet-item>
+	</block>
+	<action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+<action-sheet data-name="department" hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
 	<block wx:for="{{actionSheetItems}}">
-		<action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+		<action-sheet-item class="item" bindtap="bindItemTap" data-type="department" data-name="{{item}}">{{item}}</action-sheet-item>
 	</block>
 	<action-sheet-cancel class="cancel">取消</action-sheet-cancel>
 </action-sheet>
